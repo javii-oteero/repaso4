@@ -1,12 +1,12 @@
 package es.iesmz.tests;
 
-import java.util.Arrays;
-import java.util.Collections;
-
 public class Vector {
 
     public static int [] reverso(int [] v){
-        Collections.reverse(Arrays.asList(v));
-        return v;
+        int[] reversedArray = new int[v.length];
+        for (int i = 0; i < v.length; i++) {
+            reversedArray[i] = v[v.length - i - 1];
+        }
+        return reversedArray;
     }
 }
